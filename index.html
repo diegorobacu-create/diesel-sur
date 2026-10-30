@@ -8,74 +8,141 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <a class="skip" href="#contenido">Ir al contenido</a>
+  <a class="skip-link" href="#contenido">Ir al contenido</a>
 
-  <header>
-    <a class="brand" href="#inicio" aria-label="Diesel Sur, inicio">DIESEL <span>SUR</span></a>
+  <div class="utility-bar">
+    <p>Servicio integral diésel</p>
+    <a href="https://www.instagram.com/dieselsur_/" target="_blank" rel="noopener">Instagram @dieselsur_ ↗</a>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Diesel Sur, inicio">
+      <span class="brand-mark" aria-hidden="true">DS</span>
+      <span>DIESEL<br><em>SUR</em></span>
+    </a>
     <nav aria-label="Navegación principal">
       <a href="#servicios">Servicios</a>
       <a href="#contacto">Contacto</a>
-      <a href="https://www.instagram.com/dieselsur_/" target="_blank" rel="noopener">Instagram</a>
     </nav>
+    <a class="header-cta" href="https://wa.me/5493518036358" target="_blank" rel="noopener">WhatsApp <span aria-hidden="true">↗</span></a>
   </header>
 
   <main id="contenido">
     <section id="inicio" class="hero">
       <div class="hero-copy">
-        <p class="eyebrow">SERVICIO INTEGRAL DIÉSEL</p>
-        <h1>Soluciones para tu sistema diésel.</h1>
-        <p class="lead">Reparación de bombas inyectoras e inyectores, sistema common rail y diagnóstico por escáner.</p>
-        <a class="button" href="https://wa.me/5493518036358" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+        <p class="eyebrow"><i aria-hidden="true"></i> DIESEL SUR · SERVICIO INTEGRAL</p>
+        <h1>Precisión para tu <span>sistema diésel.</span></h1>
+        <p class="hero-lede">Reparación de bombas inyectoras e inyectores, sistema common rail y diagnóstico por escáner.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="https://wa.me/5493518036358" target="_blank" rel="noopener">Consultar por WhatsApp <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="#servicios">Ver servicios <span aria-hidden="true">↓</span></a>
+        </div>
       </div>
-      <div class="hero-mark" aria-hidden="true">
-        <span>DS</span>
-        <small>DIÉSEL · INYECCIÓN · DIAGNÓSTICO</small>
-      </div>
+
+      <aside class="system-card" aria-label="Servicios de Diesel Sur">
+        <div class="system-card-head">
+          <span>DS / 01</span>
+          <span class="pulse"><i></i> DISPONIBLE</span>
+        </div>
+        <div class="system-core" aria-hidden="true">
+          <div class="core-ring ring-one"></div>
+          <div class="core-ring ring-two"></div>
+          <div class="core-center">DS</div>
+          <span class="node node-one"></span>
+          <span class="node node-two"></span>
+          <span class="node node-three"></span>
+        </div>
+        <div class="system-readout">
+          <p>ÁREA DE SERVICIO</p>
+          <strong>INYECCIÓN<br>DIÉSEL</strong>
+          <span>Bombas · Inyectores · Common rail</span>
+        </div>
+      </aside>
+    </section>
+
+    <section class="capability-strip" aria-label="Tecnologías">
+      <p>TECNOLOGÍAS DE INYECCIÓN</p>
+      <div><span>BOSCH</span><span>DELPHI</span><span>DENSO</span><span>SIEMENS</span></div>
     </section>
 
     <section id="servicios" class="services">
-      <div class="section-heading">
-        <p class="eyebrow">SERVICIOS</p>
-        <h2>Atención para vehículos diésel.</h2>
+      <div class="section-intro">
+        <p class="eyebrow"><i aria-hidden="true"></i> QUÉ HACEMOS</p>
+        <h2>El servicio que tu sistema necesita.</h2>
+        <p>Atención enfocada en los componentes y diagnósticos de inyección diésel.</p>
       </div>
+
       <div class="service-grid">
-        <article>
-          <span>01</span>
+        <article class="service-card">
+          <div class="service-number">01</div>
+          <div class="service-icon icon-pump" aria-hidden="true"><span></span><span></span><span></span></div>
           <h3>Bombas e inyectores</h3>
           <p>Reparación de bombas inyectoras e inyectores.</p>
         </article>
-        <article>
-          <span>02</span>
+        <article class="service-card featured">
+          <div class="service-number">02</div>
+          <div class="service-icon icon-rail" aria-hidden="true"><span></span><span></span><span></span></div>
           <h3>Sistema common rail</h3>
           <p>Servicio para sistemas de inyección common rail.</p>
         </article>
-        <article>
-          <span>03</span>
-          <h3>Diagnóstico</h3>
+        <article class="service-card">
+          <div class="service-number">03</div>
+          <div class="service-icon icon-scan" aria-hidden="true"><span></span><span></span><span></span></div>
+          <h3>Diagnóstico por escáner</h3>
           <p>Diagnóstico por escáner para evaluar tu vehículo.</p>
         </article>
       </div>
-      <p class="brands">Equipos y sistemas: Bosch · Delphi · Denso · Siemens</p>
+    </section>
+
+    <section class="contact-band">
+      <div class="contact-band-title">
+        <p class="eyebrow"><i aria-hidden="true"></i> CONTACTO DIRECTO</p>
+        <h2>Contanos qué necesitás.</h2>
+        <p>Escribinos por WhatsApp o acercate al taller para hacer tu consulta.</p>
+      </div>
+      <a class="contact-band-action" href="https://wa.me/5493518036358" target="_blank" rel="noopener">
+        <span>INICIAR CONSULTA</span>
+        <b aria-hidden="true">↗</b>
+      </a>
     </section>
 
     <section id="contacto" class="contact">
-      <div>
-        <p class="eyebrow">CONTACTO</p>
-        <h2>Hablemos de tu vehículo.</h2>
-        <p class="contact-copy">Escribinos o visitanos para consultar por el servicio que necesitás.</p>
+      <div class="contact-heading">
+        <p class="eyebrow"><i aria-hidden="true"></i> DATOS DE CONTACTO</p>
+        <h2>Diesel Sur</h2>
+        <p>Servicio integral diésel.</p>
       </div>
-      <address>
-        <a href="https://wa.me/5493518036358" target="_blank" rel="noopener"><strong>WhatsApp</strong><span>351 803 6358</span></a>
-        <a href="https://www.google.com/maps/search/?api=1&amp;query=Av.+Armada+Argentina+1713" target="_blank" rel="noopener"><strong>Dirección</strong><span>Av. Armada Argentina 1713</span></a>
-        <a href="https://www.instagram.com/dieselsur_/" target="_blank" rel="noopener"><strong>Instagram</strong><span>@dieselsur_</span></a>
-        <a href="https://www.facebook.com/dieselsur" target="_blank" rel="noopener"><strong>Facebook</strong><span>/dieselsur</span></a>
+      <address class="contact-list">
+        <a href="https://wa.me/5493518036358" target="_blank" rel="noopener">
+          <span class="contact-label">WHATSAPP</span>
+          <strong>351 803 6358</strong>
+          <b aria-hidden="true">↗</b>
+        </a>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=Av.+Armada+Argentina+1713" target="_blank" rel="noopener">
+          <span class="contact-label">DIRECCIÓN</span>
+          <strong>Av. Armada Argentina 1713</strong>
+          <b aria-hidden="true">↗</b>
+        </a>
+        <a href="https://www.instagram.com/dieselsur_/" target="_blank" rel="noopener">
+          <span class="contact-label">INSTAGRAM</span>
+          <strong>@dieselsur_</strong>
+          <b aria-hidden="true">↗</b>
+        </a>
+        <a href="https://www.facebook.com/dieselsur" target="_blank" rel="noopener">
+          <span class="contact-label">FACEBOOK</span>
+          <strong>/dieselsur</strong>
+          <b aria-hidden="true">↗</b>
+        </a>
       </address>
     </section>
   </main>
 
   <footer>
-    <a class="brand" href="#inicio">DIESEL <span>SUR</span></a>
-    <p>Servicio integral diésel</p>
+    <a class="brand" href="#inicio" aria-label="Volver al inicio de Diesel Sur">
+      <span class="brand-mark" aria-hidden="true">DS</span>
+      <span>DIESEL<br><em>SUR</em></span>
+    </a>
+    <p>© <span id="year">2026</span> Diesel Sur</p>
   </footer>
 </body>
 </html>
