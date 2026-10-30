@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1320" height="180" viewBox="0 0 1320 180" role="img" aria-labelledby="logo-title">
+  <title id="logo-title">Diesel Sur</title>
+  <desc>Reconstrucción vectorial de la marca de la tarjeta. Letras y símbolos trazados como curvas, sin fuentes ni imágenes incrustadas. Amarillo sobre fondo transparente.</desc>
+  <g fill="#FFD13D" transform="translate(16 -30)">
+    <path id="barra-izquierda" d="M0 40H126V174H0Z"/>
+    <path id="marco-flecha" fill-rule="evenodd" d="M126 40H908L992 120 908 200H126ZM134 48V192H904L980 120 904 48Z"/>
+    <g id="nombre">
+      <path id="letra-d" fill-rule="evenodd" transform="translate(152 65)" d="M0 0H31C64 0 88 22 88 55S64 110 31 110H0ZM29 27V83H31C48 83 59 72 59 55S48 27 31 27Z"/>
+      <path id="letra-i" transform="translate(250 65)" d="M0 0H27V110H0Z"/>
+      <path id="letra-e-1" transform="translate(290 65)" d="M72 0H52C21 0 0 21 0 55C0 89 21 110 52 110H72V84H53C42 84 34 79 30 68H69V43H30C34 32 42 26 53 26H72Z"/>
+      <path id="letra-s-1" transform="translate(374 65)" d="M70 0H40C16 0 2 14 2 33C2 47 10 57 25 65L42 74C46 76 48 79 48 82C48 85 45 87 40 87H2V110H42C66 110 80 96 80 77C80 63 71 52 56 44L36 33C32 31 30 28 30 26C30 23 33 21 38 21H70Z"/>
+      <path id="letra-e-2" transform="translate(466 65)" d="M72 0H52C21 0 0 21 0 55C0 89 21 110 52 110H72V84H53C42 84 34 79 30 68H69V43H30C34 32 42 26 53 26H72Z"/>
+      <path id="letra-l" transform="translate(550 65)" d="M0 0H28V75C28 81 31 84 37 84H64V110H31C11 110 0 100 0 79Z"/>
+      <path id="letra-s-2" transform="translate(635 65)" d="M70 0H40C16 0 2 14 2 33C2 47 10 57 25 65L42 74C46 76 48 79 48 82C48 85 45 87 40 87H2V110H42C66 110 80 96 80 77C80 63 71 52 56 44L36 33C32 31 30 28 30 26C30 23 33 21 38 21H70Z"/>
+      <path id="letra-u" transform="translate(727 65)" d="M0 0H28V72C28 81 32 85 39 85S50 81 50 72V0H78V73C78 99 63 112 39 112S0 99 0 73Z"/>
+      <path id="letra-r" fill-rule="evenodd" transform="translate(817 65)" d="M0 110V37C0 14 14 0 40 0C65 0 79 14 79 34C79 46 73 56 65 60C76 65 81 75 81 88V110H53V87C53 75 48 71 39 71H29V110ZM29 39V49H39C47 49 51 44 51 37S47 25 40 25C33 25 29 30 29 39Z"/>
+    </g>
+    <path id="chevron-1" d="M948 40H1014L1094 120 1014 200H948L1028 120Z"/>
+    <path id="chevron-2" d="M1045 40H1111L1191 120 1111 200H1045L1125 120Z"/>
+    <path id="chevron-3" d="M1142 40H1208L1288 120 1208 200H1142L1222 120Z"/>
+  </g>
+</svg>
+

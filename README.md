@@ -19,7 +19,7 @@ No se publican ciudad, horarios, antigüedad, garantías ni políticas comercial
 
 ## Imágenes y marca
 
-El logo fue extraído de la tarjeta proporcionada por el usuario. Las fotografías de componentes y diagnóstico son imágenes ilustrativas creadas para este sitio mediante la herramienta integrada de generación de imágenes; no representan las instalaciones ni el personal de Diesel Sur. No se utilizaron imágenes del sitio de referencia.
+El logo se reconstruyó en curvas vectoriales a partir de la tarjeta proporcionada por el usuario. assets/diesel-sur-logo.svg contiene 14 trazados editables, sin fuentes ni imágenes incrustadas. assets/diesel-sur-logo.png es su exportación transparente de 3960 × 540 px. La web usa SVG con PNG de respaldo. Las fotografías de componentes y diagnóstico son imágenes ilustrativas creadas para este sitio mediante la herramienta integrada de generación de imágenes; no representan las instalaciones ni el personal de Diesel Sur. No se utilizaron imágenes del sitio de referencia.
 
 ## Funcionamiento
 
