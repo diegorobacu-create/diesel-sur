@@ -21,3 +21,17 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}.button:hover,.service-card:hover{transform:none}.service-card:hover .service-photo img{transform:scale(var(--photo-zoom,1))}}
 
 .brand picture{display:block}.brand img{width:100%;height:auto}
+
+/* Encabezado rojo continuo, conservando la posición de la marca. */
+.site-header{background:#c51228;color:#fff;box-shadow:0 1px 0 #ffffff26}
+.site-header .brand{background:transparent}
+.site-header .navigation a{color:#fff}
+.site-header .navigation a:hover{color:#ffe18c}
+.site-header .navigation a::after{background:var(--yellow)}
+.site-header .header-contact{background:var(--yellow);color:var(--black)}
+.site-header .header-contact:hover{background:#ffe18c}
+.site-header .menu-toggle{color:#fff;border-color:#ffffff70}
+.site-header a:focus-visible,.site-header button:focus-visible{outline-color:var(--yellow)}
+@media(max-width:900px){
+  .site-header .navigation{background:#c51228;border-top-color:#ffffff26}
+}
