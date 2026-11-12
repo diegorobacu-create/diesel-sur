@@ -38,7 +38,7 @@
       'Otra consulta'
     ];
     const whatsappBase = 'https://wa.me/5493518036358';
-    const mapUrl = 'https://www.google.com/maps/search/?api=1&query=Av.%20Armada%20Argentina%201713';
+    const mapUrl = 'https://maps.app.goo.gl/M78CHre8Fu8QemkX9';
     const messageLimit = 30;
 
     function whatsappUrl(message) {
@@ -62,6 +62,7 @@
         elements.log.firstElementChild.remove();
       }
       scrollToLatest();
+      return bubble;
     }
 
     function renderChoices(choices, moveFocus) {
@@ -121,7 +122,7 @@
 
     function handleChoice(action, service) {
       if (action === 'services') {
-        appendMessage('Servicios disponibles: reparación de bombas inyectoras e inyectores, sistema common rail y diagnóstico por escáner. Elegí sobre qué servicio querés consultar.', 'bot');
+        appendMessage('Servicios disponibles: reparación de bombas inyectoras e inyectores, sistema common rail y diagnóstico por escáner. Para orientarte, contanos la marca, el modelo y el año del vehículo, qué ocurre y desde cuándo.', 'bot');
         renderChoices([
           { label: 'Consultar por bombas e inyectores', action: 'prepare', service: services[0] },
           { label: 'Consultar por common rail', action: 'prepare', service: services[1] },
@@ -129,25 +130,31 @@
           { label: 'Volver al menú', action: 'menu' }
         ]);
       } else if (action === 'location') {
-        appendMessage('La dirección es Av. Armada Argentina 1713.', 'bot');
+        const locationMessage = appendMessage('Estamos en Av. Armada Argentina 1713, Córdoba Capital.', 'bot');
+        const mapLink = document.createElement('a');
+        mapLink.className = 'assistant-inline-link';
+        mapLink.href = mapUrl;
+        mapLink.target = '_blank';
+        mapLink.rel = 'noopener noreferrer';
+        mapLink.textContent = 'Ver dirección en Google Maps ↗';
+        locationMessage.append(mapLink);
         renderChoices([
-          { label: 'Ver ubicación en Google Maps', href: mapUrl, primary: true },
-          { label: 'Preparar consulta', action: 'prepare' },
+          { label: 'Preparar consulta', action: 'prepare', primary: true },
           { label: 'Volver al menú', action: 'menu' }
         ]);
       } else if (action === 'schedule') {
-        appendMessage('Los horarios, los turnos y la disponibilidad se confirman directamente con el taller por WhatsApp.', 'bot');
+        appendMessage('Atendemos de lunes a viernes, de 9 a 13 y de 15 a 17:30. Para coordinar un turno, consultá disponibilidad con el taller por WhatsApp.', 'bot');
         renderChoices([
           {
-            label: 'Consultar horarios y turnos por WhatsApp',
-            href: whatsappUrl('Hola Diesel Sur, quisiera consultar los horarios de atención y cómo coordinar un turno.'),
+            label: 'Consultar disponibilidad de turno',
+            href: whatsappUrl('Hola Diesel Sur, quisiera consultar disponibilidad y coordinar un turno.'),
             primary: true
           },
           { label: 'Preparar consulta', action: 'prepare' },
           { label: 'Volver al menú', action: 'menu' }
         ]);
       } else if (action === 'prices') {
-        appendMessage('Los precios y presupuestos se consultan con el taller. Podés indicar el servicio, el vehículo y el motivo de tu consulta.', 'bot');
+        appendMessage('El importe del presupuesto depende del trabajo y de la evaluación del caso. Compartí el vehículo, el año y el motivo de tu consulta para que el taller pueda orientarte.', 'bot');
         renderChoices([
           {
             label: 'Consultar precios por WhatsApp',
@@ -158,7 +165,7 @@
           { label: 'Volver al menú', action: 'menu' }
         ]);
       } else if (action === 'prepare') {
-        appendMessage('Completá tu consulta. Después vas a poder revisar el mensaje antes de abrir WhatsApp.', 'bot');
+        appendMessage('Contanos qué vehículo tenés, el año, qué ocurre y desde cuándo. Si lo sabés, incluí el motor y cualquier código de falla. Después podés revisar el mensaje y continuar por WhatsApp.', 'bot');
         showForm(service);
       } else if (action === 'menu') {
         appendMessage('Elegí una opción para continuar.', 'bot');
