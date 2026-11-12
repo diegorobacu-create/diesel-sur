@@ -1,0 +1,67 @@
+/* Asistente guiado local: sin dependencias ni servicios de conversación. */
+.assistant-toggle[hidden],.assistant [hidden],.floating-whatsapp[hidden]{display:none!important}
+.assistant-is-open{overflow:hidden}
+.assistant-toggle{position:fixed;right:24px;bottom:max(22px,env(safe-area-inset-bottom));z-index:30;display:inline-flex;align-items:center;gap:12px;min-height:60px;padding:13px 21px;border:1px solid #ffffff30;border-radius:32px;background:var(--red);color:#fff;box-shadow:0 5px 25px #11151b38;text-align:left;line-height:1.2;font-size:14px;font-weight:700;transition:background .18s,transform .18s}
+.assistant-toggle>.icon{width:27px;height:27px;color:var(--yellow)}
+.assistant-toggle small{display:block;margin-top:5px;color:#fff2ca;font-size:10px;font-weight:400;letter-spacing:.02em}
+.assistant-toggle:hover{background:var(--red-dark);transform:translateY(-2px)}
+.assistant{position:fixed;inset:auto 24px max(22px,env(safe-area-inset-bottom)) auto;width:400px;max-width:calc(100vw - 32px);height:min(680px,calc(100vh - 44px));height:min(680px,calc(100dvh - 44px));max-height:calc(100dvh - 44px);margin:0;padding:0;border:1px solid #ffffff40;border-radius:14px;background:#f4f5f7;color:var(--text);box-shadow:0 20px 80px #11151b45;overflow:hidden;font-size:14px;line-height:1.6}
+.assistant[open]{display:flex;flex-direction:column}
+.assistant::backdrop{background:#11151b52}
+.assistant-header{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;flex-shrink:0;padding:22px 20px 18px;background:#c51228;color:#fff}
+.assistant-logo{width:162px;height:auto;margin-bottom:14px}
+.assistant-header h2{font-size:21px;line-height:1.3;letter-spacing:-.02em;color:#fff}
+.assistant-header h2:focus{outline:0}
+.assistant-header p{margin-top:6px;color:#fff2ca;font-size:11px}
+.assistant-close{display:grid;place-items:center;flex-shrink:0;width:44px;height:44px;margin:-6px -6px 0 0;border:1px solid #ffffff70;border-radius:50%;background:transparent;color:#fff}
+.assistant-close:hover{background:#ffffff1c}
+.assistant-header :focus-visible{outline-color:var(--yellow)}
+.assistant-body{flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain;padding:20px;scroll-padding-block:15px}
+.assistant-description{font-size:11px;line-height:1.6;color:#626773;margin-bottom:19px}
+.assistant-log{display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+.assistant-message{max-width:94%;padding:13px 15px;border-radius:2px 13px 13px;background:#fff;border:1px solid #e2e5e9;color:var(--text);font-size:13px;white-space:pre-line;overflow-wrap:anywhere}
+.assistant-message-user{align-self:flex-end;background:#fae5e8;border-color:#f3d0d6;border-radius:13px 2px 13px 13px;color:#771020}
+.assistant-inline-link{display:block;width:fit-content;min-height:44px;padding-top:11px;color:var(--red);font-size:13px;font-weight:700;text-decoration:underline;text-underline-offset:3px}
+.assistant-options{display:grid;gap:8px;margin-top:16px}
+.assistant-choice{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;min-height:45px;padding:11px 14px;border:1px solid #d8dde5;border-radius:7px;background:#fff;color:var(--text);font-size:13px;font-weight:700;line-height:1.5;text-align:left;overflow-wrap:anywhere}
+.assistant-choice::after{content:'↗';color:var(--red);font-size:16px}
+button.assistant-choice::after{content:'›';font-size:22px;line-height:1}
+.assistant-choice:hover{border-color:var(--red);background:#fff7f8}
+.assistant-choice-primary{border-color:var(--red);background:var(--red);color:#fff}
+.assistant-choice-primary::after{color:var(--yellow)}
+.assistant-choice-primary:hover{background:var(--red-dark);border-color:var(--red-dark)}
+.assistant-form,.assistant-result{margin-top:17px;padding:17px;border:1px solid #e2e5e9;border-radius:9px;background:#fff}
+.assistant-form{display:grid;gap:9px}
+.assistant-form h3,.assistant-result h3{font-size:18px;line-height:1.4;letter-spacing:-.02em;margin-bottom:6px}
+.assistant-form label{font-size:12px;font-weight:700;margin-top:7px}
+.assistant-form label span{font-weight:400;color:var(--muted)}
+.assistant-form input,.assistant-form select,.assistant-form textarea{font-size:16px;min-width:0}
+.assistant-form textarea{min-height:100px;max-height:230px}
+.assistant .assistant-note{margin-block:4px 10px;color:#626773;font-size:11px;line-height:1.65}
+.assistant-form .button,.assistant-result>.button{width:100%;min-height:48px;font-size:12px;gap:12px;padding-inline:14px;line-height:1.5}
+.assistant-form .button{margin-top:5px}
+.assistant-text-button{min-height:44px;padding:8px 3px;border:0;background:transparent;color:var(--red);font-size:12px;font-weight:700;line-height:1.4;text-decoration:underline;text-underline-offset:3px}
+.assistant-text-button:hover{color:var(--red-dark)}
+.assistant-preview{margin-block:11px 16px;padding:13px;border-radius:5px;background:var(--pale);color:var(--text);white-space:pre-wrap;overflow-wrap:anywhere;font-size:13px;line-height:1.7}
+.assistant-result-actions{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px;margin-top:8px}
+.assistant-footer{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-shrink:0;min-height:56px;padding:5px 20px;background:#fff;border-top:1px solid var(--line)}
+.assistant-footer>span{max-width:160px;color:#626773;font-size:10px;line-height:1.5}
+@media(max-width:650px){
+  .assistant-toggle{right:16px;bottom:max(16px,env(safe-area-inset-bottom));min-height:56px;padding:12px 17px;gap:10px;font-size:13px}
+  .assistant-toggle small{font-size:10px}
+  .assistant{inset:auto 12px max(12px,env(safe-area-inset-bottom)) auto;width:calc(100vw - 24px);max-width:calc(100vw - 24px);height:min(690px,calc(100vh - 24px));height:min(690px,calc(100dvh - max(12px,env(safe-area-inset-bottom)) - 12px));max-height:calc(100dvh - max(12px,env(safe-area-inset-bottom)) - 12px);border-radius:12px}
+  .assistant-header{padding:18px 16px 15px}
+  .assistant-header h2{font-size:20px}
+  .assistant-logo{width:148px;margin-bottom:12px}
+  .assistant-body{padding:16px}
+  .assistant-footer{padding-inline:16px}
+  .assistant-form,.assistant-result{padding:14px}
+}
+@media(max-height:500px){
+  .assistant-header{padding-block:12px}
+  .assistant-logo{display:none}
+  .assistant-header h2{font-size:18px}
+  .assistant-header p{margin-top:3px}
+  .assistant-body{padding-block:12px}
+}
+@media(prefers-reduced-motion:reduce){.assistant-toggle{transition:none}.assistant-toggle:hover{transform:none}}

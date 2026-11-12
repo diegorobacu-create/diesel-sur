@@ -9,7 +9,9 @@
   <link rel="canonical" href="https://diegorobacu-create.github.io/diesel-sur/">
   <link rel="preload" as="image" href="assets/inyeccion-diesel.webp">
   <link rel="stylesheet" href="styles.css?v=20261030-header-red2">
+  <link rel="stylesheet" href="assistant.css?v=20261112-chat1">
   <script src="app.js?v=20261030-logo1" defer></script>
+  <script src="assistant.js?v=20261112-chat1" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#contenido">Ir al contenido</a>
@@ -60,6 +62,41 @@
     </div></section>
   </main>
   <footer class="site-footer"><div class="container footer-grid"><div><a class="brand footer-brand" href="#inicio" aria-label="Diesel Sur, volver al inicio"><picture><source srcset="assets/diesel-sur-logo.svg?v=vector1" type="image/svg+xml"><img src="assets/diesel-sur-logo.png?v=vector1" width="1320" height="180" alt="Diesel Sur"></picture></a><p>Servicio integral diésel.<br>Inyección, reparación y diagnóstico.</p></div><div><h3>Navegá el sitio</h3><a href="#servicios">Servicios</a><a href="#nosotros">Diesel Sur</a><a href="#contacto">Contacto</a></div><div><h3>Encontranos</h3><a href="https://wa.me/5493518036358" target="_blank" rel="noopener">WhatsApp · 351 803 6358</a><a href="https://www.instagram.com/dieselsur_/" target="_blank" rel="noopener">Instagram · @dieselsur_</a><a href="#ubicacion">Av. Armada Argentina 1713</a></div></div><div class="container footer-bottom"><span>© <span id="year">2026</span> Diesel Sur</span><a href="#inicio">Volver arriba ↑</a></div></footer>
-  <a class="floating-whatsapp" href="https://wa.me/5493518036358" target="_blank" rel="noopener" aria-label="Consultar a Diesel Sur por WhatsApp"><svg class="icon"><use href="#chat"/></svg><span>WhatsApp</span></a>
+  <a id="assistant-fallback" class="floating-whatsapp" href="https://wa.me/5493518036358" target="_blank" rel="noopener" aria-label="Consultar a Diesel Sur por WhatsApp"><svg class="icon"><use href="#chat"/></svg><span>WhatsApp</span></a>
+  <button id="assistant-toggle" class="assistant-toggle" type="button" aria-haspopup="dialog" aria-controls="diesel-assistant" aria-expanded="false" hidden>
+    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11a8 8 0 0 1-8 8H7l-4 3V7a4 4 0 0 1 4-4h6a8 8 0 0 1 8 8Z"/><path d="M8 10h8M8 14h5"/></svg>
+    <span>¿Te ayudamos?<small>Asistente Diesel Sur</small></span>
+  </button>
+  <dialog id="diesel-assistant" class="assistant" aria-labelledby="assistant-title" aria-describedby="assistant-description">
+    <header class="assistant-header">
+      <div><img class="assistant-logo" src="assets/diesel-sur-logo.svg?v=vector1" width="1320" height="180" alt="Diesel Sur"><h2 id="assistant-title" tabindex="-1">¿En qué te ayudamos?</h2><p>Asistente automático</p></div>
+      <button id="assistant-close" class="assistant-close" type="button" aria-label="Cerrar asistente"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M6 18 18 6"/></svg></button>
+    </header>
+    <div id="assistant-body" class="assistant-body">
+      <p id="assistant-description" class="assistant-description">Elegí una opción. Las consultas al taller se envían por WhatsApp.</p>
+      <div id="assistant-log" class="assistant-log" role="log" aria-label="Conversación con el asistente" aria-live="polite" aria-relevant="additions"></div>
+      <div id="assistant-options" class="assistant-options" role="group" aria-label="Opciones del asistente"></div>
+      <form id="assistant-form" class="assistant-form" hidden>
+        <h3>Contanos qué necesitás</h3>
+        <label for="assistant-service">Servicio</label>
+        <select id="assistant-service" name="service"><option>Bombas e inyectores</option><option>Sistema common rail</option><option>Diagnóstico por escáner</option><option selected>Otra consulta</option></select>
+        <label for="assistant-vehicle">Tu vehículo <span>(opcional)</span></label>
+        <input id="assistant-vehicle" name="vehicle" type="text" maxlength="100" placeholder="Marca, modelo y año" autocomplete="off">
+        <label for="assistant-message">Tu consulta</label>
+        <textarea id="assistant-message" name="message" rows="3" maxlength="1000" required placeholder="Contanos qué ocurre o qué necesitás consultar…" aria-describedby="assistant-form-note"></textarea>
+        <p id="assistant-form-note" class="assistant-note">Vas a poder revisar el mensaje antes de abrir WhatsApp.</p>
+        <button class="button button-red" type="submit">Preparar mensaje <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></button>
+        <button id="assistant-form-back" class="assistant-text-button" type="button">Volver al menú</button>
+      </form>
+      <div id="assistant-result" class="assistant-result" hidden>
+        <h3>Tu consulta está lista</h3>
+        <p id="assistant-preview" class="assistant-preview"></p>
+        <p class="assistant-note">Al abrir WhatsApp podés editar el mensaje y enviarlo. El taller te responderá por ese medio.</p>
+        <a id="assistant-send" class="button button-red" target="_blank" rel="noopener noreferrer">Revisar y enviar en WhatsApp <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a>
+        <div class="assistant-result-actions"><button id="assistant-edit" class="assistant-text-button" type="button">Editar consulta</button><button id="assistant-result-back" class="assistant-text-button" type="button">Volver al menú</button></div>
+      </div>
+    </div>
+    <footer class="assistant-footer"><span>Atención directa por WhatsApp</span><button id="assistant-home" class="assistant-text-button" type="button">Otras opciones</button></footer>
+  </dialog>
 </body>
 </html>

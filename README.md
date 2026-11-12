@@ -25,8 +25,12 @@ El logo se reconstruyó en curvas vectoriales a partir de la tarjeta proporciona
 
 Navegación con anclas y menú móvil. Preguntas frecuentes con controles nativos details/summary. El formulario prepara un mensaje en WhatsApp; el visitante lo revisa y envía desde WhatsApp. El sitio no almacena las consultas ni simula envío a un servidor.
 
-Para revisar localmente, servir esta carpeta con cualquier servidor estático. index.html, styles.css, app.js y assets/ deben conservar su estructura relativa. No hace falta instalar paquetes para publicar.
+El botón «¿Te ayudamos?» abre un asistente guiado sin IA. Sus respuestas locales cubren servicios, ubicación y cómo consultar horarios, precios y turnos con el taller. Permite elegir un servicio, completar vehículo y consulta, revisar el mensaje y abrir WhatsApp para enviarlo. No reserva turnos ni envía mensajes automáticamente. Los datos quedan solo en memoria mientras la página está abierta; no utiliza cookies, almacenamiento local ni servicios de chat externos. Si JavaScript o el diálogo nativo no están disponibles, se conserva el enlace flotante a WhatsApp.
+
+Para revisar localmente, servir esta carpeta con cualquier servidor estático. index.html, styles.css, app.js, assistant.css, assistant.js y assets/ deben conservar su estructura relativa. No hace falta instalar paquetes para publicar.
 
 ## Verificación
 
 Revisión visual de escritorio y móvil, imágenes cargadas, navegación, formulario con acentos y caracteres especiales, validación de mensaje vacío y ausencia de desbordes a 320, 390, 768, 1024 y 1440 px. Esta revisión no constituye una auditoría completa WCAG.
+
+El asistente se verificó a 320, 360, 390, 768 y 1440 px, en pantallas de poca altura y en horizontal. Se revisaron apertura/cierre y foco del diálogo, navegación móvil, conservación del borrador, validación, texto literal seguro, codificación de WhatsApp y alternativas sin JavaScript o sin diálogo nativo. No requiere instalar paquetes ni configurar cuentas o claves.
